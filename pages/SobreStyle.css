@@ -13,16 +13,18 @@ color: rgb(248, 248, 248);
 
 /* estilo header nav */
 
-header nav {
-  text-align: center;
+header nav{
   margin: 50px;
-  
+  gap: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header nav a {
   color: rgb(248, 248, 248);
   text-decoration: none;
-  padding: 0px 50px 10px 0;
-  font-size: 25pt;
+  padding: 7px;
+  font-size: 2rem;
   position: relative;
 }
 
@@ -30,7 +32,7 @@ header nav a::after{
   content: " ";
   width: 0%;
   height: 4px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   position:absolute;
   bottom: 0;
   left: 0;
