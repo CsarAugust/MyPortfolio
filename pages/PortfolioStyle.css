@@ -1,0 +1,89 @@
+main{
+  width: 100%;
+}
+
+.container-portfolio{
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  transition: all 0.5s;
+  
+}
+@keyframes drop-delay {
+  from{
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.container-portfolio-card{
+  padding: 15px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 2rem;
+  justify-content: center;
+  animation: drop-delay .8s linear;
+}
+.card-portfolio{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  max-width: 300px;
+  height: 300px;
+  
+}
+.card-portfolio a img{
+  width: 100%;
+  height: 100%;
+}
+.card-portfolio a{
+  color: rgb(255, 255, 255);
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  text-decoration: none;
+}
+.card-portfolio a::before{
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  opacity: 0;
+  width: 100%;
+  height: 300px;
+  z-index: 1000;
+  transition: .6s;
+}
+.card-portfolio a:hover::before{
+  opacity: .5;
+}
+.card-portfolio a::after{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  content: "Ver Mais";
+  color: rgb(255, 255, 255);
+  z-index: 1001;
+  padding: 20px;
+  background-color: red;
+  border-radius: 10px;
+  opacity: 0;
+  transition: .5s;
+}
+.card-portfolio a:hover::after{
+  opacity: 1;
+}
