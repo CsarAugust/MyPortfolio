@@ -3,24 +3,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-div#area {  
-font: normal 16px 20pt Arial;
-background-color: rgb(88, 184, 184);
-color: rgb(27, 19, 19);
-width:  200px;
-height: 200px;
-line-height: 200px;
-text-align:  center;
-}
-header nav {
-  text-align: center;
-  margin-top: 50px;
   font-family: 'segoe UI', tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {  
+background-image: linear-gradient(90deg, rgb(1, 17, 36),rgb(4, 47, 100),rgb(3, 90, 197));
+color: rgb(248, 248, 248);
+}
+
+/* estilo header nav */
+
+header nav {
+  text-align: center;
+  margin: 50px;
+  
+}
 header nav a {
-  color: black;
+  color: rgb(248, 248, 248);
   text-decoration: none;
   padding: 0px 50px 10px 0;
   font-size: 25pt;
@@ -41,22 +40,44 @@ header nav a::after{
 header nav a:hover::after{
   width: 100%
 }
+
+/* estilo header nav */
+
 main {
   display: flex; 
   justify-content: center;
   align-items: center;
 }
 .content {
+  margin-top: 50px;
   max-width: 900px;
+  display: flex;
+  max-height: 60vh;
 }
-.content h1 {
-  text-align: center;
+.content .foto{
+  min-width: 350px;
 }
-.content  h2 {
+.content .foto img{
+  width: 100%;
+}
+.content .text{
+  overflow-y: scroll;
+}
+.content .text::-webkit-scrollbar {
+  display: none;
+}
+.content .text h1 {
+  text-transform: uppercase;
   text-align: center;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+.content .text h2 {
+  font-size: 2rem;
+  padding: 1rem;
 }
 .content  p {
-  text-align: center;
-  text-indent: 30px;
+  text-indent: 10px;
+  padding: 0 1rem;
 }
 
